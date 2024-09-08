@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { Clock } from 'lucide-react'
 import { Game, gameList, meetings } from '@/data/history'
+import styles from './game-club.module.css'
 
 
 function renderGameImage(game: Game) {
@@ -19,9 +20,9 @@ function renderGameImage(game: Game) {
     <Image
       src={imageSrc}
       alt={game.name}
-      width={150}
-      height={150}
-      className="rounded-lg"
+      width={200}
+      height={300}
+      className={`${styles.gameImage} rounded-lg`}
     />
   );
 
@@ -59,7 +60,7 @@ export function GameClub() {
             <li key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
               <div className="p-6">
                 <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-2xl font-semibold">{new Date(meeting.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</h2>
+                  <h2 className="text-2xl font-semibold">{new Date(meeting.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</h2>
                   <p className="text-lg font-medium text-blue-600">{meeting.title}</p>
                 </div>
                 {meeting.location && <p className="text-gray-600 mb-4">{meeting.location}</p>}
@@ -67,18 +68,20 @@ export function GameClub() {
                   {meeting.games.map((gameKey, gameIndex) => {
                     const game = gameList[gameKey];
                     return (
-                      <div key={gameIndex} className="flex items-start space-x-4">
-                        {renderGameImage(game)}
-                        <div>
+                      <div key={gameIndex} className="flex flex-col items-start space-y-4">
+                        <div className="flex items-center space-x-2">
                           <h3 className="text-xl font-semibold">
                             <a href={game.steamAppId ? `https://store.steampowered.com/app/${game.steamAppId}/` : game.url} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
                               {game.name}
-                            </a>
+                            </a> &middot;
                           </h3>
                           <div className="flex items-center text-gray-500">
                             <Clock className="w-4 h-4 mr-1" />
                             <span>{game.playtime || 0}</span>
                           </div>
+                        </div>
+                        <div>
+                          {renderGameImage(game)}
                         </div>
                       </div>
                     )
