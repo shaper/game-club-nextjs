@@ -2,7 +2,47 @@
 
 import Image from 'next/image'
 import { Clock } from 'lucide-react'
-import { gameList, meetings } from '@/data/history'
+import { Game, gameList, meetings } from '@/data/history'
+
+
+function renderGameImage(game: Game) {
+  let imageSrc;
+  if (game.coverArt) {
+    imageSrc = game.coverArt;
+  } else if (game.steamAppId) {
+    imageSrc = `https://steamcdn-a.akamaihd.net/steam/apps/${game.steamAppId}/library_600x900.jpg`;
+  } else {
+    imageSrc = '/assets/missing.svg';
+  }
+
+  const imageElement = (
+    <Image
+      src={imageSrc}
+      alt={game.name}
+      width={150}
+      height={150}
+      className="rounded-lg"
+    />
+  );
+
+  if (game.url) {
+    return (
+      <a href={game.url} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
+        {imageElement}
+      </a>
+    );
+  }
+
+  if (game.steamAppId) {
+    return (
+      <a href={`https://store.steampowered.com/app/${game.steamAppId}/`} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
+        {imageElement}
+      </a>
+    );
+  }
+
+  return imageElement;
+}
 
 
 export function GameClub() {
@@ -28,40 +68,13 @@ export function GameClub() {
                     const game = gameList[gameKey];
                     return (
                       <div key={gameIndex} className="flex items-start space-x-4">
-                        {game.coverArt ? (
-                          <Image
-                            src={game.coverArt}
-                            alt={game.name}
-                            width={150}
-                            height={150}
-                            className="rounded-lg"
-                          />
-                        ) : game.steamAppId ? (
-                          <a href={`https://store.steampowered.com/app/${game.steamAppId}/`} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
-                            <Image
-                              src={`https://steamcdn-a.akamaihd.net/steam/apps/${game.steamAppId}/library_600x900.jpg`}
-                              alt={game.name}
-                              width={150}
-                              height={150}
-                              className="rounded-lg hover:opacity-80 transition-opacity"
-                            />
-                          </a>
-                        ) : (
-                          <Image
-                            src="/missing.svg"
-                            alt="Missing cover art"
-                            width={150}
-                            height={150}
-                            className="rounded-lg"
-                          />
-                        )}
+                        {renderGameImage(game)}
                         <div>
                           <h3 className="text-xl font-semibold">
-                            <a href={`https://store.steampowered.com/app/${game.steamAppId}/`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
+                            <a href={game.steamAppId ? `https://store.steampowered.com/app/${game.steamAppId}/` : game.url} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
                               {game.name}
                             </a>
                           </h3>
-                          <p className="text-gray-600 mb-2">{game.description || ""}</p>
                           <div className="flex items-center text-gray-500">
                             <Clock className="w-4 h-4 mr-1" />
                             <span>{game.playtime || 0}</span>
@@ -71,7 +84,6 @@ export function GameClub() {
                     )
                   })}
                 </div>
-                <p className="text-gray-700">{meeting.description || ""}</p>
               </div>
             </li>
           ))}
