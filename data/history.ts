@@ -6,7 +6,11 @@ export type Game = {
   playtime?: number;
 }
 
-export const gameList = {
+export type GameList = {
+  [key: string]: Game;
+}
+
+export const gameList : GameList = {
   night_in_the_woods: {
     name: "Night in the Woods",
     steamAppId: '481510',
@@ -113,7 +117,7 @@ export const gameList = {
   },
   strawberry_cubes: {
     name: "Strawberry Cubes",
-    url: 'https://lorenschmidt.itch.io/strawberrycubes,'
+    url: 'https://lorenschmidt.itch.io/strawberrycubes'
   },
   one_shot: {
     name: "One Shot",
@@ -471,7 +475,7 @@ export const gameList = {
     steamAppId: '1043810',
     playtime: 14,
   },
-} as const satisfies { [key: string]: Game };
+}
 
 export type GameKey = keyof typeof gameList;
 
