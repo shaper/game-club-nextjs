@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { Clock } from 'lucide-react'
 import { Game, gameList, meetings } from '@/data/history'
 import styles from './game-club.module.css'
-import Suggestion from './suggestion';
 
 
 function renderGameImage(game: Game) {
@@ -57,7 +56,6 @@ export function GameClub() {
       </header>
       <main className="container mx-auto px-4 py-8">
         <ul className="space-y-8">
-          <Suggestion games={Object.values(gameList)} />
           {meetings.slice().reverse().map((meeting, index) => (
             <li key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
               <div className="p-6">
