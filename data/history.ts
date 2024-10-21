@@ -475,6 +475,12 @@ export const gameList : GameList = {
     steamAppId: '1043810',
     playtime: 14,
   },
+  arco: {
+    name: "Arco",
+    url: 'https://store.steampowered.com/app/2366970/Arco/',
+    steamAppId: '2366970',
+    playtime: 10,
+  }
 }
 
 export type GameKey = keyof typeof gameList;
@@ -811,5 +817,10 @@ export const meetings: Meeting[] = [
     "date": "2024-10-06",
     "title": "Video Game Club 62.0",
     "games": ["tactical_breach_wizards"]
+  },
+  {
+    "date": "2024-11-03",
+    "title": "Video Game Club 63.0",
+    "games": ["arco"]
   }
 ];
