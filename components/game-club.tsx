@@ -6,7 +6,7 @@ import { Game, gameList, meetings } from '@/data/history'
 import styles from './game-club.module.css'
 
 
-function renderGameImage(game: Game) {
+function renderGameImage(game: Game, index: number) {
   let imageSrc;
   if (game.coverArt) {
     imageSrc = game.coverArt;
@@ -23,6 +23,7 @@ function renderGameImage(game: Game) {
       width={200}
       height={300}
       className={`${styles.gameImage} rounded-lg`}
+      priority={index < 3}
     />
   );
 
@@ -56,8 +57,8 @@ export function GameClub() {
       </header>
       <main className="container mx-auto px-4 py-8">
         <ul className="space-y-8">
-          {meetings.slice().reverse().map((meeting, index) => (
-            <li key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
+          {meetings.slice().reverse().map((meeting, meetingIndex) => (
+            <li key={meetingIndex} className="bg-white shadow-md rounded-lg overflow-hidden">
               <div className="p-6">
                 <div className="flex justify-between items-center mb-4">
                   <h2 className="text-2xl font-semibold text-blue-600">{new Date(meeting.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</h2>
@@ -81,7 +82,7 @@ export function GameClub() {
                           </div>
                         </div>
                         <div>
-                          {renderGameImage(game)}
+                          {renderGameImage(game, meetingIndex)}
                         </div>
                       </div>
                     )
