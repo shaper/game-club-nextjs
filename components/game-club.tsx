@@ -60,7 +60,14 @@ export function GameClub() {
             <li key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
               <div className="p-6">
                 <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-2xl font-semibold text-blue-600">{new Date(meeting.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</h2>
+                  <h2 className="text-2xl font-semibold text-blue-600">
+                    {new Date(meeting.date + 'T00:00:00Z').toLocaleDateString('en-US', { 
+                      year: 'numeric', 
+                      month: 'long', 
+                      day: 'numeric',
+                      timeZone: 'UTC'
+                    })}
+                  </h2>
                   <p className="text-lg font-medium text-blue-600">{meeting.title}</p>
                 </div>
                 {meeting.location && <p className="text-gray-600 mb-4">{meeting.location}</p>}
