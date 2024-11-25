@@ -480,6 +480,12 @@ export const gameList : GameList = {
     url: 'https://store.steampowered.com/app/2366970/Arco/',
     steamAppId: '2366970',
     playtime: 10,
+  },
+  one_k_resist: {
+    name: "1000x Resist",
+    url: 'https://store.steampowered.com/app/1675830/1000xRESIST/',
+    steamAppId: '1675830',
+    playtime: 11,
   }
 }
 
@@ -822,5 +828,10 @@ export const meetings: Meeting[] = [
     "date": "2024-11-03",
     "title": "Video Game Club 63.0",
     "games": ["arco"]
+  },
+  {
+    "date": "2024-12-08",
+    "title": "Video Game Club 64.0",
+    "games": ["one_k_resist"]
   }
 ];
