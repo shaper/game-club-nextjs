@@ -10,7 +10,7 @@ export type GameList = {
   [key: string]: Game;
 }
 
-export const gameList : GameList = {
+export const gameList: GameList = {
   night_in_the_woods: {
     name: "Night in the Woods",
     steamAppId: '481510',
@@ -486,6 +486,18 @@ export const gameList : GameList = {
     url: 'https://store.steampowered.com/app/1675830/1000xRESIST/',
     steamAppId: '1675830',
     playtime: 11,
+  },
+  rise_of_the_golden_idol: {
+    name: "The Rise of the Golden Idol",
+    url: 'https://store.steampowered.com/app/2716400/The_Rise_of_the_Golden_Idol/',
+    steamAppId: '2716400',
+    playtime: 11,
+  },
+  lorelei_and_the_laser_eyes: {
+    name: "Lorelei and the Laser Eyes",
+    url: 'https://store.steampowered.com/app/2008920/Lorelei_and_the_Laser_Eyes/',
+    steamAppId: '2008920',
+    playtime: 16,
   }
 }
 
@@ -833,5 +845,15 @@ export const meetings: Meeting[] = [
     "date": "2024-12-08",
     "title": "Video Game Club 64.0",
     "games": ["one_k_resist"]
+  },
+  {
+    "date": "2025-01-12",
+    "title": "Video Game Club 65.0",
+    "games": ["rise_of_the_golden_idol"]
+  },
+  {
+    "date": "2025-02-23",
+    "title": "Video Game Club 66.0",
+    "games": ["lorelei_and_the_laser_eyes"]
   }
 ];
