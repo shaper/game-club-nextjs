@@ -1,14 +1,18 @@
-import { GameClub } from "@/components/game-club";
+import { GameClub } from "@/components/game-club"
+import { FloatingHeader } from "@/components/floating-header"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="min-h-screen bg-background">
+      <FloatingHeader />
+      <main className="container py-6 md:py-12">
         <GameClub />
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        It&apos;s dangerous to go alone. Take this!
+      <footer className="border-t py-6 md:py-0">
+        <div className="container flex h-14 items-center justify-center text-sm">
+          It&apos;s dangerous to go alone. Take this!
+        </div>
       </footer>
     </div>
-  );
+  )
 }
