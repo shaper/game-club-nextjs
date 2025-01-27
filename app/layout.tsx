@@ -18,6 +18,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Video Game Club",
   description: "Historical records of the Video Game Club",
+  icons: {
+    icon: "/gamepad-2.svg",
+  },
 }
 
 export default function RootLayout({
