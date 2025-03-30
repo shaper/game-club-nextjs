@@ -498,6 +498,18 @@ export const gameList: GameList = {
     url: 'https://store.steampowered.com/app/2008920/Lorelei_and_the_Laser_Eyes/',
     steamAppId: '2008920',
     playtime: 16,
+  },
+  citizen_sleeper_2: {
+    name: "Citizen Sleeper 2",
+    url: 'https://store.steampowered.com/app/2442460/Citizen_Sleeper_2_Starward_Vector/',
+    steamAppId: '2442460',
+    playtime: 10,
+  },
+  animal_well: {
+    name: "Animal Well",
+    url: 'https://store.steampowered.com/app/813230/ANIMAL_WELL/',
+    steamAppId: '813230',
+    playtime: 7,
   }
 }
 
@@ -855,5 +867,15 @@ export const meetings: Meeting[] = [
     "date": "2025-02-23",
     "title": "Video Game Club 66.0",
     "games": ["lorelei_and_the_laser_eyes"]
+  },
+  {
+    "date": "2025-03-22",
+    "title": "Video Game Club 67.0",
+    "games": ["citizen_sleeper_2"]
+  },
+  {
+    "date": "2025-04-26",
+    "title": "Video Game Club 68.0",
+    "games": ["animal_well"]
   }
 ];
