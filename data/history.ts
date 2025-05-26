@@ -510,6 +510,12 @@ export const gameList: GameList = {
     url: 'https://store.steampowered.com/app/813230/ANIMAL_WELL/',
     steamAppId: '813230',
     playtime: 7,
+  },
+  blue_prince: {
+    name: "Blue Prince",
+    url: 'https://store.steampowered.com/app/1569580/Blue_Prince/',
+    steamAppId: '1569580',
+    playtime: 15,
   }
 }
 
@@ -877,5 +883,10 @@ export const meetings: Meeting[] = [
     "date": "2025-04-26",
     "title": "Video Game Club 68.0",
     "games": ["animal_well"]
+  },
+  {
+    "date": "2025-05-31",
+    "title": "Video Game Club 69.0",
+    "games": ["blue_prince"]
   }
 ];
