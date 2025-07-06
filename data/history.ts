@@ -516,6 +516,18 @@ export const gameList: GameList = {
     url: 'https://store.steampowered.com/app/1569580/Blue_Prince/',
     steamAppId: '1569580',
     playtime: 15,
+  },
+  wanderstop: {
+    name: "Wanderstop",
+    url: 'https://store.steampowered.com/app/1299460/Wanderstop/',
+    steamAppId: '1299460',
+    playtime: 12,
+  },
+  roottrees: {
+    name: "The Roottrees are Dead",
+    url: 'https://store.steampowered.com/app/2754380/The_Roottrees_are_Dead/',
+    steamAppId: '2754380',
+    playtime: 8,
   }
 }
 
@@ -888,5 +900,15 @@ export const meetings: Meeting[] = [
     "date": "2025-05-31",
     "title": "Video Game Club 69.0",
     "games": ["blue_prince"]
+  },
+  {
+    "date": "2025-07-05",
+    "title": "Video Game Club 70.0",
+    "games": ["wanderstop"]
+  },
+  {
+    "date": "2025-08-02",
+    "title": "Video Game Club 71.0",
+    "games": ["roottrees"]
   }
 ];
