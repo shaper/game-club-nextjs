@@ -528,7 +528,76 @@ export const gameList: GameList = {
     url: 'https://store.steampowered.com/app/2754380/The_Roottrees_are_Dead/',
     steamAppId: '2754380',
     playtime: 8,
-  }
+  },
+  skin_deep: {
+    name: "Skin Deep",
+    url: 'https://store.steampowered.com/app/301280/Skin_Deep/',
+    steamAppId: '301280',
+    playtime: 10,
+  },
+  tiny_bookshop: {
+    name: "Tiny Bookshop",
+    url: 'https://tinybookshopgame.com/',
+    steamAppId: '2133760',
+    playtime: 15,
+  },
+  strange_antiquities: {
+    name: "Strange Antiquities",
+    url: 'https://www.iceberg-games.com/games/strange-antiquities/',
+    steamAppId: '2885870',
+    playtime: 10,
+  },
+  seance_at_blake_manor: {
+    name: "The Séance of Blake Manor",
+    url: 'https://store.steampowered.com/app/1395520/The_Sance_of_Blake_Manor/',
+    steamAppId: '1395520',
+    playtime: 12,
+  },
+  unbeatable: {
+    name: "UNBEATABLE",
+    url: 'https://store.steampowered.com/app/2240620/UNBEATABLE/',
+    steamAppId: '2240620',
+  },
+  keeper: {
+    name: "Keeper",
+    url: 'https://www.doublefine.com/games/keeper',
+    steamAppId: '3043580',
+    playtime: 5,
+  },
+  diora: {
+    name: "Diora",
+    url: 'https://play.date/games/diora/',
+  },
+  cairn: {
+    name: "Cairn",
+    url: 'https://store.steampowered.com/app/1588550/Cairn/',
+    steamAppId: '1588550',
+    playtime: 14,
+  },
+  tr_49: {
+    name: "TR-49",
+    url: 'https://store.steampowered.com/app/3838370/TR49/',
+    steamAppId: '3838370',
+    playtime: 7,
+  },
+  system_shock: {
+    name: "System Shock",
+    url: 'https://store.steampowered.com/app/482400/System_Shock/',
+    steamAppId: '482400',
+    playtime: 15,
+  },
+  titanium_court: {
+    name: "Titanium Court",
+    url: 'https://store.steampowered.com/app/2364580/Titanium_Court/',
+    steamAppId: '2364580',
+    playtime: 15,
+  },
+  first_light: {
+    name: "007: First Light",
+    url: 'https://store.steampowered.com/app/3768760/007_First_Light/',
+    steamAppId: '3768760',
+    playtime: 15,
+  },
 }
 
 export type GameKey = keyof typeof gameList;
@@ -910,5 +979,60 @@ export const meetings: Meeting[] = [
     "date": "2025-08-02",
     "title": "Video Game Club 71.0",
     "games": ["roottrees"]
-  }
+  },
+  {
+    "date": "2025-09-06",
+    "title": "Video Game Club 72.0",
+    "games": ["skin_deep"]
+  },
+    {
+    "date": "2025-10-05",
+    "title": "Video Game Club 73.0",
+    "games": ["tiny_bookshop"]
+  },
+    {
+    "date": "2025-11-01",
+    "title": "Video Game Club 74.0",
+    "games": ["strange_antiquities"]
+  },
+    {
+    "date": "2025-12-07",
+    "title": "Video Game Club 75.0",
+    "games": ["seance_at_blake_manor"]
+  },
+    {
+    "date": "2026-01-04",
+    "title": "Video Game Club 76.0",
+    "games": ["unbeatable"]
+  },
+    {
+    "date": "2026-02-08",
+    "title": "Video Game Club 77.0",
+    "games": ["keeper", "diora"]
+  },
+    {
+    "date": "2026-03-08",
+    "title": "Video Game Club 78.0",
+    "games": ["cairn"]
+  },
+    {
+    "date": "2026-04-12",
+    "title": "Video Game Club 79.0",
+    "games": ["tr_49"]
+  },
+    {
+    "date": "2026-05-17",
+    "title": "Video Game Club 80.0",
+    "games": ["system_shock"]
+  },
+  {
+    "date": "2026-06-20",
+    "title": "Video Game Club 81.0",
+    "games": ["titanium_court"]
+  },
+  {
+    "date": "2026-07-18",
+    "title": "Video Game Club 82.0",
+    "games": ["first_light"]
+  },
 ];
