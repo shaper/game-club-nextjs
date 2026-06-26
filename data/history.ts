@@ -2,6 +2,9 @@ export type Game = {
   name: string;
   url?: string;
   steamAppId?: string;
+  // Recent games in 2026 have started having different image paths.
+  // You can find this by going to steamdb.info and looking up the "library_capsule" image link.
+  steamLibraryCapsuleImage?: string;
   coverArt?: string;
   playtime?: number;
 }
@@ -561,12 +564,14 @@ export const gameList: GameList = {
   keeper: {
     name: "Keeper",
     url: 'https://www.doublefine.com/games/keeper',
+    steamLibraryCapsuleImage: '37ca88b65171a0b57193621893971774a4ef6015/library_600x900.jpg',
     steamAppId: '3043580',
     playtime: 5,
   },
   diora: {
     name: "Diora",
     url: 'https://play.date/games/diora/',
+    coverArt: 'https://media-cdn.play.date/media/games/450465/Playdate-Catalog-art-web-small_0BNmRkV.png',
   },
   cairn: {
     name: "Cairn",
@@ -578,6 +583,7 @@ export const gameList: GameList = {
     name: "TR-49",
     url: 'https://store.steampowered.com/app/3838370/TR49/',
     steamAppId: '3838370',
+    steamLibraryCapsuleImage: 'e28438b731d355142840e0b357a1fb7055546a9f/library_capsule.jpg',
     playtime: 7,
   },
   system_shock: {
@@ -590,12 +596,14 @@ export const gameList: GameList = {
     name: "Titanium Court",
     url: 'https://store.steampowered.com/app/2364580/Titanium_Court/',
     steamAppId: '2364580',
+    steamLibraryCapsuleImage: '4884a1c2d2d6b81c50360992bbaca64c07412dc6/library_capsule.jpg',
     playtime: 15,
   },
   first_light: {
     name: "007: First Light",
     url: 'https://store.steampowered.com/app/3768760/007_First_Light/',
     steamAppId: '3768760',
+    steamLibraryCapsuleImage: '1159a696d257cbeb3f4479be3466cfba2ae938a0/library_600x900.jpg',
     playtime: 15,
   },
 }

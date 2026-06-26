@@ -10,7 +10,8 @@ function renderGameImage(game: Game, index: number) {
   if (game.coverArt) {
     imageSrc = game.coverArt
   } else if (game.steamAppId) {
-    imageSrc = `https://steamcdn-a.akamaihd.net/steam/apps/${game.steamAppId}/library_600x900.jpg`
+    const url = 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/';
+    imageSrc = `${url}${game.steamAppId}/${game.steamLibraryCapsuleImage ?? 'library_600x900.jpg'}`
   } else {
     imageSrc = "/assets/missing.svg"
   }

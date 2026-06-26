@@ -3,6 +3,8 @@ const nextConfig = {
   images: {
     remotePatterns: [
       'steamcdn-a.akamaihd.net',
+      'shared.fastly.steamstatic.com',
+      'media-cdn.play.date',
       'images.ctfassets.net',
       'm.media-amazon.com',
       'image.api.playstation.com',
